@@ -6,12 +6,11 @@ function onReady() {
     console.log(onReady);
 //create click event
     $('#addEmpBtn').on('click', submitEmployee);
-    $('#salary').on('click', '.deleteBtn', deleteEmp);
-
-
-
+    $('#salaries').on('click', '.deleteBtn', deleteEmp);
 
 }
+//global empty array
+let employeeArray = [];
 
 //add click listener function
 function submitEmployee(){
@@ -25,8 +24,8 @@ function submitEmployee(){
     let salaryIn = $('#salIn').val();
 
     //tests get user inputs
-    //let employeeAdded = { firstName, lastName, title, idNumber, salaryIn };
-    //console.log(employeeAdded);
+    let employeeAdded = { firstName, lastName, title, idNumber, salaryIn };
+    console.log(employeeAdded);
 
         $('#salaries').append(
             `
@@ -48,6 +47,11 @@ function submitEmployee(){
     $('#idNumIn').val('');
     $('#salIn').val('');
 
+    //will take employeeAdded and push into an empty array
+    (employeeArray).push(employeeAdded);
+    console.log(employeeArray);
+
+    calculateMonthly();
 }
 
 function deleteEmp() {
@@ -55,3 +59,21 @@ function deleteEmp() {
 
     $(this).closest('tr').remove();
 }
+
+function calculateMonthly(){
+    console.log ('in calculateMonthly')
+    //variable named totalSalaries set to zero
+    let totalSalaries = 0
+
+    for(let i=0; i < employeeArray.length; i++);
+//will loop through new array
+    totalSalaries += Number(employyArray[i].salary);
+
+//sum of objects at [i]4 in new array
+//divide total by 12
+//if statement total>20k
+//append total monthly to DOM
+
+
+}
+
