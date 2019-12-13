@@ -70,13 +70,16 @@ function calculateMonthly(){
     totalSalaries += Number(employeeArray[i].salaryIn)
     }//sum of objects at [i]4 in new array
 
-    totalSalaries = (totalsalaries / 12);
+    totalSalaries = (totalSalaries / 12);
     //divide total by 12
 
 
 
 //if statement total>20k
-    if (totalMonthly)
+    if (totalSalaries >= 20000){
+
+
+    }
 //append total monthly to DOM
     $('#totalMonthly').empty();
     $('#totalMonthly').append('TOTAL MONTHLY COSTS: ', totalSalaries);
