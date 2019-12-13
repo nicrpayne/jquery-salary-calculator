@@ -65,15 +65,21 @@ function calculateMonthly(){
     //variable named totalSalaries set to zero
     let totalSalaries = 0
 
-    for(let i=0; i < employeeArray.length; i++);
+    for(let i=0; i < employeeArray.length; i++) {
 //will loop through new array
-    totalSalaries += Number(employyArray[i].salary);
+    totalSalaries += Number(employeeArray[i].salaryIn)
+    }//sum of objects at [i]4 in new array
 
-//sum of objects at [i]4 in new array
-//divide total by 12
+    totalSalaries = (totalsalaries / 12);
+    //divide total by 12
+
+
+
 //if statement total>20k
+    if (totalMonthly)
 //append total monthly to DOM
-
+    $('#totalMonthly').empty();
+    $('#totalMonthly').append('TOTAL MONTHLY COSTS: ', totalSalaries);
 
 }
 
