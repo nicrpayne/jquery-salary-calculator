@@ -7,7 +7,7 @@ function onReady() {
 //create click event
     $('#addEmpBtn').on('click', submitEmployee);
     $('#salaries').on('click', '.deleteBtn', deleteEmp);
-
+  
 }
 //global empty array
 let employeeArray = [];
@@ -73,16 +73,21 @@ function calculateMonthly(){
     totalSalaries = (totalSalaries / 12);
     //divide total by 12
 
-
-
-//if statement total>20k
-    if (totalSalaries >= 20000){
-
-
-    }
 //append total monthly to DOM
     $('#totalMonthly').empty();
     $('#totalMonthly').append('TOTAL MONTHLY COSTS: ', totalSalaries);
+    changeTextColor();
 
+    //if statement total>20k change color of text
+    function changeTextColor() {
+        console.log('in changeTextColor');
+        console.log(totalSalaries);
+        if (totalSalaries > 19999) {
+            $('#totalMonthly').addClass(`colorRed`);
+        }
+    }
+    
 }
+
+
 
