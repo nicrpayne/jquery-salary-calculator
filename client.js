@@ -35,7 +35,7 @@ function submitEmployee(){
                     <td>${title}</td>
                     <td>${idNumber}</td>
                     <td>${salaryIn}</td>
-                    <td><button class="deleteBtn">DELETE!</button></td>
+                    <td><button class="deleteBtn btn btn-danger">DELETE!</button></td>
                 </tr>
             `
 

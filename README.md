@@ -1,9 +1,12 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Salary Calculator
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This application will calculate the total salary for all employees added to determine compliance to budget constraints.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/github-finalization-assignment).
+## Use
+
+To use, enter employee information into the appropriate fields, click the 'Add Employee' button and the employee information will be added to the table and summed up to the 'Total Monthly Costs' field. 
+
+To remove an employee, hit the 'Delete' button and the employee will be removed from the the table (removal from 'Total Monthly Costs'), will be added functionality in later releases. Please update regularly.
+
